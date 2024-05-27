@@ -24,11 +24,11 @@ const App = () => {
           />
           <Route
             path="/transactions"
-            element={!token ? (<><NavBar/><Transactions token={token} /> </>) : <Navigate to="/login" />}
+            element={token ? (<><NavBar/><Transactions token={token} /> </>) : <Navigate to="/login" />}
           />
           <Route
             path="/deposit-withdraw"
-            element={!token ? (<><NavBar/><DepositWithdraw token={token} /> </>): <Navigate to="/login" />}
+            element={token ? (<><NavBar/><DepositWithdraw token={token} /> </>): <Navigate to="/login" />}
           />
           <Route
             path="/"
